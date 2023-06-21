@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  width: 30%;
+  height: 700px;
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+  width: 30%;
+  height: 700px;
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  width: 30%;
+  height: 700px;
+}
+#im1,
+#im2,
+#im3 {
+  margin: 60px 0 0 60px;
+}
+#se {
+  font-family: "Lexend Deca", sans-serif;
+  font-style: italic;
+  color: hsl(0, 0%, 100%, 0.75);
+  font-weight: 400px;
+  font-size: 30px;
+  margin: 30px 0 0 60px;
+  display: block;
+}
+.container .sedans .pa,
+.container .suvs .pa1,
+.container .luxury .pa2 {
+  display: block;
+  margin: 30px 0 0 60px;
+  padding-right: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%, 0.75);
+}
+button {
+  position: absolute;
+  margin: 100px 0 0 60px;
+}
+button {
+  background: none;
+  color: hsl(0, 0%, 95%);
+  width: 150px;
+  height: 60px;
+  border: 1px solid hsl(0, 0%, 95%);
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 10px;
+  transition: 0.6s;
+  overflow: hidden;
+}
+button:focus {
+  outline: none;
+}
+button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(225, 225, 225, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5s;
+  filter: blur(30px);
+  transform: translate(-130px) skewX(-15deg);
+}
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(225, 225, 225, 0.3);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translate(-100px) scaleX(-15deg);
+}
+button:hover {
+  background: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
+}
