@@ -1,21 +1,35 @@
+body.dark-mode {
+  background-color: hsl(0, 0%, 13%);
+  color: hsl(0, 0%, 95%);
+}
 .container {
   display: flex;
 }
 
-.sedans {
-  background-color: hsl(31, 77%, 52%);
-  width: 30%;
-  height: 700px;
+@media (max-width: 600px) {
+  .sedans,
+  .suvs,
+  .luxury {
+    width: 100%;
+    height: 300px;
+  }
 }
-.suvs {
-  background-color: hsl(184, 100%, 22%);
-  width: 30%;
-  height: 700px;
-}
-.luxury {
-  background-color: hsl(179, 100%, 13%);
-  width: 30%;
-  height: 700px;
+@media (min-width: 601px) {
+  .sedans {
+    background-color: hsl(31, 77%, 52%);
+    width: 30%;
+    height: 700px;
+  }
+  .suvs {
+    background-color: hsl(184, 100%, 22%);
+    width: 30%;
+    height: 700px;
+  }
+  .luxury {
+    background-color: hsl(179, 100%, 13%);
+    width: 30%;
+    height: 700px;
+  }
 }
 #im1,
 #im2,
@@ -87,7 +101,8 @@ button::after {
   transform: translate(-100px) scaleX(-15deg);
 }
 button:hover {
-  background: hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 85%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
 button:hover:before {
