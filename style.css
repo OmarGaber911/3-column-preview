@@ -1,5 +1,5 @@
 body.dark-mode {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 95%);
 }
 .container {
